@@ -1,0 +1,23 @@
+import java.util.Iterator;
+
+public class IteratorReverso implements Iterator {
+    private ListaReversa i;
+    private int position;
+    public IteratorReverso(ListaReversa i){
+        this.i = i;
+        position = i.size()  ; //percorre e tbm e utilizada para obter o tamanho da lista <--
+    }
+
+    @Override
+    public boolean hasNext() { //Este método verifica se ainda existem elemento para serem iterados na coleção.
+        // Ele retorna um valor booleano true se houver mais elementos,
+        // ou false caso contrário.
+        return position !=0;
+    }
+
+    @Override
+    public Object next() {
+        return i.get(--position); // Este método retorna o próximo elemento na iteração da coleção.
+        // Ele avança o iterador para o próximo elemento e retorna aquele elemento.
+    }
+}
