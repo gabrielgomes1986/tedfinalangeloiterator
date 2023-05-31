@@ -1,0 +1,13 @@
+public class Main {
+    public static void main(String[] args) {
+        AbstractList lista = new ListaReversa();
+        lista.append(10);
+        lista.append(20);
+        lista.append(30);
+        lista.append(40);
+        lista.append(50);
+        for (Object object : lista){
+            System.out.println(object);
+        }
+    }
+}
