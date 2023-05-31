@@ -1,0 +1,11 @@
+//interface genérica que define a capacidade de um objeto ser iterado, ou seja,
+// permite que seus elementos sejam percorridos em um loop.
+// A interface Iterable é implementada por classes que desejam fornecer iteração sobre seus elementos.
+//A principal função da interface Iterable é fornecer um método chamado iterator()
+public abstract class AbstractList implements Iterable {
+    public abstract void append(Object o);
+    public abstract int size();
+    public abstract int get(int i);
+
+
+}
