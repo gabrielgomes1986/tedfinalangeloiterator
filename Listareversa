@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class ListaReversa extends AbstractList{
+    private ArrayList lista = new ArrayList(); //<--- criando uma lista
+
+    @Override
+    public Iterator iterator(){
+        // retorna um objeto do tipo Iterator <----
+        return new IteratorReverso(this);
+
+    }
+    @Override
+    public void append (Object o){
+        lista.add(o);
+    }
+
+    @Override
+    public int size() {
+        return lista.size();// retorna o tamanho da lista
+    }
+
+    @Override
+    public int get(int i) {
+        return (int) lista.get(i); // retornará o elemento da lista no índice i como um valor inteiro.
+    }
+}
